@@ -42,7 +42,16 @@ namespace ConsoleApp1
         
         public int FindNumberOfBlankSpaces(string line)
         {
+            int counterletters = 0;
+            int countSpaces = 0;
 
+            foreach (char c in line)
+            {
+                if (char.IsLetter(c))
+                {
+                    counterletters++;
+                }
+            }
         }
     }
    
