@@ -27,16 +27,18 @@ namespace ConsoleApp1
             using (StreamReader file = new StreamReader (@"U:\Users\723381\beowulf.txt"))
             {
                 int counter = 0;
+                int number = 0;
                 string line;              
                 while ((line = file.ReadLine()) != null)
                 {
-                    if (line.Contains("Sea") && line.Contains("Fare"))
+                    if (line.Contains("Sea") && line.Contains("Fare")|| line.Contains ("Sea") && line.Contains("fare"))
                     {
-                        counter++;
+                        int x = counter - 1;
+                        number++;
                     }
                     
                 }
-
+                Console.WriteLine("")
                 file.Close();
             }
         }
