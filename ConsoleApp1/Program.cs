@@ -33,8 +33,16 @@ namespace ConsoleApp1
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
                 }
+                file.Close();
+                Console.WriteLine($"File has {counter} lines.");
+
 
             }
+        }
+        
+        public int FindNumberOfBlankSpaces(string line)
+        {
+
         }
     }
    
