@@ -30,17 +30,14 @@ namespace ConsoleApp1
                 string line;              
                 while ((line = file.ReadLine()) != null)
                 {
-                    if (line.Contains("word"))
+                    if (line.Contains("Sea") && line.Contains("Fare"))
                     {
-                        Console.WriteLine(counter.ToString() + ": " + line);
+                        counter++;
                     }
-
-                    counter++;
+                    
                 }
 
                 file.Close();
-
-
             }
         }
         
