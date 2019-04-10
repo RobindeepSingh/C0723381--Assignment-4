@@ -50,8 +50,14 @@ namespace ConsoleApp1
                 if (char.IsLetter(c))
                 {
                     counterletters++;
+
+                }
+                if (char.IsWhiteSpace(c))
+                {
+                    countSpaces++;
                 }
             }
+            return countSpaces;
         }
     }
    
