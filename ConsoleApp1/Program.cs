@@ -27,19 +27,18 @@ namespace ConsoleApp1
             using (StreamReader file = new StreamReader (@"U:\Users\723381\beowulf.txt"))
             {
                 int counter = 0;
-                string delim = " ,.";
-                string[] fields = null;
-                string line = null;
-
-                while (!file.EndOfStream)
+                string line;              
+                while ((line = file.ReadLine()) != null)
                 {
-                    line = file.ReadLine();
-                    line.Trim();
-                    fields = line.Split(delim.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                    counter += fields.Length;
+                    if (line.Contains("word"))
+                    {
+                        Console.WriteLine(counter.ToString() + ": " + line);
+                    }
+
+                    counter++;
                 }
+
                 file.Close();
-                Console.WriteLine($"The text file has {counter} words.");
 
 
             }
