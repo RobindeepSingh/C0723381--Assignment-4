@@ -31,9 +31,9 @@ namespace ConsoleApp1
 
                 while ((ln = file.ReadLine())!= null)
                 {
-                    Console.WriteLine(ln);
-                    Beowulf.Add(ln);
+                    counter++;
                 }
+                
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
 
