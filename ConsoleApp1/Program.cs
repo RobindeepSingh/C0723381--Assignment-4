@@ -28,17 +28,17 @@ namespace ConsoleApp1
             {
                 int counter = 0;
                 int number = 0;
-                string line;              
+                string line;
                 while ((line = file.ReadLine()) != null)
                 {
-                    if (line.Contains("Sea") && line.Contains("Fare")|| line.Contains ("Sea") && line.Contains("fare"))
+                    if (line.Contains("Sea") && line.Contains("Fare") || line.Contains("sea") && line.Contains("fare"))
                     {
                         int x = counter - 1;
                         number++;
                     }
-                    
+                   counter++;
                 }
-                Console.WriteLine("")
+                Console.WriteLine($"The number of lines that contains *Sea* and *Fare* are {number}");
                 file.Close();
             }
         }
